@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Employee data table of how many hours they worked
+  </h1>
+  <div class="page-split employees">
+    <div class="outer-wrapper">
+      <div class="table-wrapper">
+        <table class="table table-striped">
+          <thead class="table-header">
+            <tr>
+              <th>EmployeeName</th>
+              <th>Total time in month</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let e of print">
+              <td>{{e.Name}}</td>
+              <td>{{e.Hours}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="page-split chart">
+    <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels"></apx-chart>
+  </div>
